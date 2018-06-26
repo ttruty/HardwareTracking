@@ -1,5 +1,9 @@
 package com.example.kinectprocessing.hardwaretracking;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+
 import android.app.Activity;
 import android.os.Bundle;
 import java.util.ArrayList;
@@ -10,6 +14,8 @@ import android.annotation.TargetApi;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.widget.TextView;
+import android.location.Geocoder;
+import android.location.Address;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
@@ -23,6 +29,8 @@ public class DebugLocation extends Activity{
 
     private final static int ALL_PERMISSIONS_RESULT = 101;
     LocationTrack locationTrack;
+
+
 
     /** Called when the activity is first created. */
     public void onCreate(Bundle savedInstanceState) {
@@ -64,8 +72,28 @@ public class DebugLocation extends Activity{
             longitudeField.setText(longText);
             latituteField.setText(latText);
 
+            Geocoder geoCoder = new Geocoder(this, Locale.getDefault());
+            StringBuilder builder = new StringBuilder();
+            try {
+                List<Address> address = geoCoder.getFromLocation(latitude, longitude, 1);
+                int maxLines = address.get(0).getMaxAddressLineIndex();
+                for (int i = 0; i < maxLines; i++) {
+                    String addressStr = address.get(0).getAddressLine(i);
+                    builder.append(addressStr);
+                    builder.append(" ");
+                }
 
-        } else {
+                String fnialAddress = builder.toString(); //This is the complete address.
+                addressField.setText(fnialAddress); //This will display the final address.
+                Toast.makeText(getApplicationContext(), "Adress:" + fnialAddress, Toast.LENGTH_SHORT).show();
+            } catch (IOException e) {
+                // Handle IOException
+            } catch (NullPointerException e) {
+                // Handle NullPointerException
+            }
+
+
+            } else {
 
             locationTrack.showSettingsAlert();
         }
