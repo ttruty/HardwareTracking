@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <EditText
+        android:id="@+id/editHome"
+        android:layout_width="148dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:text="Square ft"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <EditText
+        android:id="@+id/editHome2"
+        android:layout_width="148dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:text="Homeid"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:text="Replace Device"
+        tools:layout_editor_absoluteX="199dp"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <Button
+        android:id="@+id/newInstall"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:text="New Install"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <Switch
+        android:id="@+id/couple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Couple?"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="327dp" />
+</android.support.constraint.ConstraintLayout>
