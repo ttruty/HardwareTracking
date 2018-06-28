@@ -22,7 +22,7 @@ allprojects {
         mavenLocal()
     }
 
-    ext.zxingCore = 'com.google.zxing:core:3.3.3'
+    //ext.zxingCore = 'com.google.zxing:core:3.3.3'
 }
 
 task clean(type: Delete) {
