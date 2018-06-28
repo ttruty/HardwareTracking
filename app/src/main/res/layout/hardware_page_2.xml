@@ -68,7 +68,7 @@
         android:id="@+id/couple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="47dp"
+        android:layout_marginBottom="46dp"
         android:text="Couple?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,19 +91,18 @@
         android:id="@+id/longitudeField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="42dp"
+        android:layout_marginBottom="11dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/addressField"
         app:layout_constraintStart_toStartOf="@+id/latituteField"
         app:layout_constraintTop_toBottomOf="@+id/latituteField" />
 
-    <EditText
+    <TextView
         android:id="@+id/addressField"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="70dp"
-        android:ems="10"
-        android:inputType="textMultiLine"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="159dp"
+        android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/newInstall"
         app:layout_constraintStart_toStartOf="@+id/longitudeField"
         app:layout_constraintTop_toBottomOf="@+id/longitudeField" />

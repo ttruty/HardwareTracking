@@ -8,6 +8,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import java.util.ArrayList;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
 import android.widget.Toast;
 import android.support.v7.app.AlertDialog;
 import android.annotation.TargetApi;
@@ -20,7 +22,6 @@ import android.location.Address;
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
-
 public class DebugLocation extends Activity{
 
     private ArrayList<String> permissionsToRequest;
@@ -29,8 +30,6 @@ public class DebugLocation extends Activity{
 
     private final static int ALL_PERMISSIONS_RESULT = 101;
     LocationTrack locationTrack;
-
-
 
     /** Called when the activity is first created. */
     public void onCreate(Bundle savedInstanceState) {
@@ -64,47 +63,28 @@ public class DebugLocation extends Activity{
 
             double longitude = locationTrack.getLongitude();
             double latitude = locationTrack.getLatitude();
+            String cityName = LocationInfo.cityName;
 
-            Toast.makeText(getApplicationContext(), "Longitude:" + Double.toString(longitude) + "\nLatitude:" + Double.toString(latitude), Toast.LENGTH_SHORT).show();
+            LocationAddress locationAddress = new LocationAddress();
+            locationAddress.getAddressFromLocation(latitude, longitude,
+                    getApplicationContext(), new GeocoderHandler());
+
+            //Toast.makeText(getApplicationContext(), "Longitude:" + Double.toString(longitude) + "\nLatitude:" + Double.toString(latitude), Toast.LENGTH_SHORT).show();
 
             String longText = Double.toString(longitude);
             String latText = Double.toString(latitude);
             longitudeField.setText(longText);
             latituteField.setText(latText);
-
-            Geocoder geoCoder = new Geocoder(this, Locale.getDefault());
-            StringBuilder builder = new StringBuilder();
-            try {
-                List<Address> address = geoCoder.getFromLocation(latitude, longitude, 1);
-                int maxLines = address.get(0).getMaxAddressLineIndex();
-                for (int i = 0; i < maxLines; i++) {
-                    String addressStr = address.get(0).getAddressLine(i);
-                    builder.append(addressStr);
-                    builder.append(" ");
-                }
-
-                String fnialAddress = builder.toString(); //This is the complete address.
-                addressField.setText(fnialAddress); //This will display the final address.
-                Toast.makeText(getApplicationContext(), "Adress:" + fnialAddress, Toast.LENGTH_SHORT).show();
-            } catch (IOException e) {
-                // Handle IOException
-            } catch (NullPointerException e) {
-                // Handle NullPointerException
-            }
-
+            addressField.setText(cityName);
 
             } else {
 
             locationTrack.showSettingsAlert();
         }
-
-
-
     }
 
     private ArrayList<String> findUnAskedPermissions(ArrayList<String> wanted) {
         ArrayList<String> result = new ArrayList<String>();
-
         for (String perm : wanted) {
             if (!hasPermission(perm)) {
                 result.add(perm);
@@ -178,5 +158,21 @@ public class DebugLocation extends Activity{
     protected void onDestroy() {
         super.onDestroy();
         locationTrack.stopListener();
+    }
+
+    private class GeocoderHandler extends Handler {
+        @Override
+        public void handleMessage(Message message) {
+            String locationAddress;
+            switch (message.what) {
+                case 1:
+                    Bundle bundle = message.getData();
+                    locationAddress = bundle.getString("address");
+                    break;
+                default:
+                    locationAddress = null;
+            }
+            Toast.makeText(getApplicationContext(), "ADDRESS" + locationAddress, Toast.LENGTH_LONG).show();
+        }
     }
 }

@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -15,6 +17,10 @@ import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 public class LocationTrack extends Service implements LocationListener {
 
@@ -31,6 +37,7 @@ public class LocationTrack extends Service implements LocationListener {
     Location loc;
     double latitude;
     double longitude;
+    String addressString;
 
 
     private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 10;
@@ -87,10 +94,7 @@ public class LocationTrack extends Service implements LocationListener {
                             longitude = loc.getLongitude();
                         }
                     }
-
-
                 }
-
 
                 /*if (checkNetwork) {
 
