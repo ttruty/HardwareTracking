@@ -21,6 +21,9 @@
         <activity android:name=".PlaceHardware_2"></activity>
         <activity android:name=".PlaceHardware_3"></activity>
         <activity android:name=".DebugLocation"></activity>
+        <activity android:name=".ParticipantPage"></activity>
+        <activity android:name=".ParticipantPage_2"></activity>
+        <activity android:name=".DevicePage"></activity>
         
     </application>
 

@@ -2,7 +2,8 @@ package com.example.kinectprocessing.hardwaretracking;
 
 public class HomeDetails {
     static String homeId = "";
-    boolean couple = false;
+    static String sqrft = "";
+    static boolean couple = false;
 
 
 }

@@ -4,64 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
 
     <Button
         android:id="@+id/deviceListButton"
-        android:layout_width="0dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="62dp"
-        android:layout_marginLeft="62dp"
-        android:layout_marginRight="62dp"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="32dp"
-        android:text="Device List"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rePlaceButton" />
-
-    <Button
-        android:id="@+id/rePlaceButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="61dp"
-        android:layout_marginLeft="61dp"
-        android:layout_marginRight="61dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="32dp"
-        android:text="Replace Hardware"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="Home List"
+        app:layout_constraintEnd_toEndOf="@+id/deviceListButton2"
+        app:layout_constraintStart_toStartOf="@+id/deviceListButton2"
         app:layout_constraintTop_toBottomOf="@+id/newPlaceButton" />
 
     <Button
-        android:id="@+id/newPlaceButton"
-        android:layout_width="0dp"
+        android:id="@+id/deviceListButton2"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:text="Device List"
+        app:layout_constraintEnd_toEndOf="@+id/rePlaceButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rePlaceButton"
+        app:layout_constraintTop_toBottomOf="@+id/deviceListButton" />
+
+    <Button
+        android:id="@+id/rePlaceButton"
+        android:layout_width="262dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Replace Hardware"
+        app:layout_constraintEnd_toEndOf="@+id/location_btn"
+        app:layout_constraintStart_toStartOf="@+id/location_btn"
+        app:layout_constraintTop_toBottomOf="@+id/deviceListButton2" />
+
+    <Button
+        android:id="@+id/newPlaceButton"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="82dp"
         android:text="New Hardware Placement"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/deviceListButton"
+        app:layout_constraintStart_toStartOf="@+id/deviceListButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/location_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="51dp"
         android:layout_marginEnd="63dp"
         android:layout_marginLeft="63dp"
         android:layout_marginRight="63dp"
         android:layout_marginStart="63dp"
+        android:layout_marginTop="16dp"
         android:text="Location Debugging"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rePlaceButton" />
 
 </android.support.constraint.ConstraintLayout>

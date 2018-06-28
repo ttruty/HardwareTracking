@@ -8,6 +8,6 @@ public class PlaceHardware_3 extends Activity{
     /** Called when the activity is first created. */
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.device_page);
+        setContentView(R.layout.participant_page_2);
     }
 }

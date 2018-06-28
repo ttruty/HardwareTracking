@@ -8,7 +8,7 @@
     tools:layout_editor_absoluteY="25dp">
 
     <EditText
-        android:id="@+id/editHome"
+        android:id="@+id/weightText"
         android:layout_width="148dp"
         android:layout_height="0dp"
         android:layout_marginBottom="18dp"
@@ -19,10 +19,10 @@
         app:layout_constraintBottom_toTopOf="@+id/latituteField"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editHome2" />
+        app:layout_constraintTop_toBottomOf="@+id/subjectIDText" />
 
     <EditText
-        android:id="@+id/editHome2"
+        android:id="@+id/subjectIDText"
         android:layout_width="148dp"
         android:layout_height="0dp"
         android:layout_marginBottom="328dp"
@@ -46,11 +46,11 @@
         android:text="Replace Device"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/newInstall"
-        app:layout_constraintTop_toBottomOf="@+id/editHome2" />
+        app:layout_constraintStart_toEndOf="@+id/next_btn"
+        app:layout_constraintTop_toBottomOf="@+id/subjectIDText" />
 
     <Button
-        android:id="@+id/newInstall"
+        android:id="@+id/next_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -59,13 +59,13 @@
         android:layout_marginRight="13dp"
         android:layout_marginStart="25dp"
         android:text="New Install"
-        app:layout_constraintBottom_toTopOf="@+id/couple"
+        app:layout_constraintBottom_toTopOf="@+id/pacemaker"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addressField" />
 
     <Switch
-        android:id="@+id/couple"
+        android:id="@+id/pacemaker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="46dp"
@@ -73,7 +73,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newInstall" />
+        app:layout_constraintTop_toBottomOf="@+id/next_btn" />
 
     <TextView
         android:id="@+id/latituteField"
@@ -84,8 +84,8 @@
         android:layout_marginRight="102dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/longitudeField"
-        app:layout_constraintEnd_toEndOf="@+id/editHome"
-        app:layout_constraintTop_toBottomOf="@+id/editHome" />
+        app:layout_constraintEnd_toEndOf="@+id/weightText"
+        app:layout_constraintTop_toBottomOf="@+id/weightText" />
 
     <TextView
         android:id="@+id/longitudeField"
@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="159dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/newInstall"
+        app:layout_constraintBottom_toTopOf="@+id/next_btn"
         app:layout_constraintStart_toStartOf="@+id/longitudeField"
         app:layout_constraintTop_toBottomOf="@+id/longitudeField" />
 
