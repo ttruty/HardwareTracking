@@ -3,7 +3,9 @@
     package="com.example.kinectprocessing.hardwaretracking">
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
     <application
+        android:hardwareAccelerated="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -23,8 +25,13 @@
         <activity android:name=".DebugLocation"></activity>
         <activity android:name=".ParticipantPage"></activity>
         <activity android:name=".ParticipantPage_2"></activity>
-        <activity android:name=".DevicePage"></activity>
-        
+        <activity android:name=".DeviceScan"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity android:name=".ContinuousCaptureActivity"></activity>
+        <activity android:name=".DeviceList"></activity>
+        <activity android:name=".DeviceInfo"></activity>
     </application>
 
 </manifest>

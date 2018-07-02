@@ -14,5 +14,7 @@
     <string name="turn_on_flashlight">Turn on Flashlight</string>
     <string name="turn_off_flashlight">Turn off Flashlight</string>
     <string name="title_activity_tabbed_scanning">Tabbed Scanning</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
     <string name="tabs">Tabs</string>
 </resources>

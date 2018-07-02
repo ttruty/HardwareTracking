@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="65dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginStart="33dp"
+        android:text="Serial Number"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/serialField"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/serialField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="65dp"
+        android:text="--"
+        app:layout_constraintBottom_toTopOf="@+id/macField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/itemIdField" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="66dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="52dp"
+        android:layout_marginStart="33dp"
+        android:text="Model"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/modelField"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="154dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginStart="33dp"
+        android:text="Item name:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/itemNameField"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginStart="33dp"
+        android:text="Mac:"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/macField"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/modelField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginRight="59dp"
+        android:text="--"
+        app:layout_constraintBottom_toTopOf="@+id/itemNameField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/macField" />
+
+    <TextView
+        android:id="@+id/itemNameField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        android:text="--"
+        app:layout_constraintBottom_toTopOf="@+id/place_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/modelField" />
+
+    <TextView
+        android:id="@+id/macField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginRight="62dp"
+        android:text="--"
+        app:layout_constraintBottom_toTopOf="@+id/modelField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/serialField" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="55dp"
+        android:layout_marginEnd="69dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="69dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="27dp"
+        android:text="Item Id:"
+        app:layout_constraintBottom_toTopOf="@+id/textView1"
+        app:layout_constraintEnd_toStartOf="@+id/itemIdField"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/itemIdField"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginTop="8dp"
+        android:text="--"
+        app:layout_constraintBottom_toTopOf="@+id/serialField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/place_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginStart="55dp"
+        android:text="Place Device"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemNameField" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

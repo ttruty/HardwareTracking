@@ -7,16 +7,26 @@
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="25dp">
 
+    <!--<Button-->
+        <!--android:id="@+id/scan_btn2"-->
+        <!--android:layout_width="168dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="98dp"-->
+        <!--android:text="Scan Device Fragment"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent" />-->
+
     <Button
-        android:id="@+id/button"
-        android:layout_width="168dp"
+        android:id="@+id/scan_btn"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="163dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
+        android:onClick="scanContinuous"
         android:text="Scan Device QR Code"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/scan_btn2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button3"

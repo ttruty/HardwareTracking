@@ -5,5 +5,4 @@ public class HomeDetails {
     static String sqrft = "";
     static boolean couple = false;
 
-
 }

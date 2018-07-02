@@ -10,7 +10,7 @@
     <Button
         android:id="@+id/deviceListButton"
         android:layout_width="260dp"
-        android:layout_height="wrap_content"
+        android:layout_height="47dp"
         android:layout_marginTop="16dp"
         android:text="Home List"
         app:layout_constraintEnd_toEndOf="@+id/deviceListButton2"

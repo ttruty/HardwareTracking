@@ -64,7 +64,7 @@ public class ParticipantPage_2 extends Activity{
         Button next = findViewById(R.id.participant_btn);
         next.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), DevicePage.class);
+                Intent myIntent = new Intent(view.getContext(), DeviceScan.class);
                 startActivityForResult(myIntent, 0);
             }
         });

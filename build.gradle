@@ -19,10 +19,8 @@ allprojects {
     repositories {
         google()
         jcenter()
-        mavenLocal()
     }
 
-    //ext.zxingCore = 'com.google.zxing:core:3.3.3'
 }
 
 task clean(type: Delete) {
